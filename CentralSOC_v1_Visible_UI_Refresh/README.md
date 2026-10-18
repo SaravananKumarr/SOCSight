@@ -1,4 +1,4 @@
-# CentralSOC: Security Log Analyzer & Threat Detection Tool
+# SOCSight: Security Log Analyzer & Threat Detection Tool
 
 A defensive, regex-driven log analysis engine that parses Linux/SSH, Apache/Nginx, Windows-style and firewall logs into a
 normalized event model, detects suspicious activity, extracts IOCs, scores risk transparently and produces analyst-ready alerts.

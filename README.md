@@ -1,7 +1,7 @@
-# SOC Analyzer
+# SOCSight
 ### Security Log Analyzer & Threat Detection Tool
 
-SOC Analyzer is a defensive security project that turns raw logs into
+SOCSight is a defensive security project that turns raw logs into
 normalized events, rule-based alerts, and documented investigations.
 
 It brings log analysis, alert triage, incident tracking, and analyst

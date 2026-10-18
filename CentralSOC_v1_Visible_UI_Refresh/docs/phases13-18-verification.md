@@ -1,4 +1,4 @@
-# CentralSOC Phases 13–18: Incremental delivery and evidence
+# SOCSight Phases 13–18: Incremental delivery and evidence
 
 This release builds on Phase 12. **It does not claim enterprise production readiness.**
 
@@ -54,7 +54,7 @@ python -m regexsoc.doctor
 ## Safe update procedure
 
 1. **Stop Flask.** Back up your working project folder, `.env`, `instance` database and uploads before copying source files.
-2. Extract the ZIP. Its actual project root is the inner `CentralSOC_Phase18_Development` directory containing `run.py` and `regexsoc`.
+2. Extract the ZIP. Its actual project root is the inner `SOCSight_Phase18_Development` directory containing `run.py` and `regexsoc`.
 3. Merge updated `regexsoc/`, `tests/`, and `docs/` into your **existing working project**. Do not replace `.env`, `.venv`, `instance/`, local database files, uploads, or custom secrets.
 4. Use your existing virtual environment and stable `REGEXSOC_SECRET_KEY`. Restart with `REGEXSOC_ENV=development` only for localhost testing.
 5. No migration was added in this release. Verify your application and run the complete pytest suite.

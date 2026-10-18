@@ -237,7 +237,7 @@ def alerts_queue_export():
     record_audit(g.db, AuditAction.ALERT_QUEUE_EXPORTED, g.current_user.username, "SUCCESS",
                  ip_address=request.remote_addr, detail={"rows": len(rows), "limit": 1000})
     return Response(to_csv(data, fields), mimetype="text/csv",
-                    headers={"Content-Disposition": 'attachment; filename="centralsoc-alert-handoff.csv"',
+                    headers={"Content-Disposition": 'attachment; filename="socsight-alert-handoff.csv"',
                              "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"})
 
 

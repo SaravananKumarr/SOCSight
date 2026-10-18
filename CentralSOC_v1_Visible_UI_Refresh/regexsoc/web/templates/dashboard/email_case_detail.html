@@ -1,5 +1,5 @@
 {% extends "app_base.html" %}
-{% block title %}Email Case #{{ case.id }} - CentralSOC{% endblock %}
+{% block title %}Email Case #{{ case.id }} - SOCSight{% endblock %}
 {% block content %}
 <div class="workspace-heading"><div><h1>Email case #{{ case.id }}</h1><p class="dim">{{ case.status }} · {{ case.classification }} · Risk {{ case.risk_score }}/100</p></div><a class="btn" href="{{ url_for('email_security.cases_index') }}">All email cases</a></div>
 <div class="panel"><h2>Preserved case metadata</h2><div class="detail-grid"><div class="field"><div class="k">Subject</div><div class="v">{{ case.subject }}</div></div><div class="field"><div class="k">Sender</div><div class="v">{{ case.sender }}</div></div><div class="field"><div class="k">Created by</div><div class="v">{{ case.created_by }}</div></div><div class="field"><div class="k">SHA-256 fingerprint</div><div class="v mono">{{ case.sha256 }}</div></div></div><p class="dim">Only message metadata is retained; original email, attachments, and URLs are not available from this case.</p></div>

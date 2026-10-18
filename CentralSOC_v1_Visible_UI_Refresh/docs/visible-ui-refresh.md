@@ -1,4 +1,4 @@
-# CentralSOC visible UI refresh
+# SOCSight visible UI refresh
 
 This update makes the overview page structurally different (prominent SOC overview header, 4-column priority cards, enhanced telemetry panels) while keeping existing backend logic and user data intact. It also adds a versioned CSS URL to avoid stale browser cache. Other pages receive the shared SOC palette.
 

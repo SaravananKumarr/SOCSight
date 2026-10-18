@@ -12,9 +12,9 @@ from regexsoc.security.audit import clean_text
 
 def ai_status():
     """Configuration diagnostics without exposing credentials or contacting the provider."""
-    enabled = os.getenv('CENTRALSOC_AI_ENABLED', '').strip().lower() in ('1', 'true', 'yes', 'on')
+    enabled = os.getenv('SOCSIGHT_AI_ENABLED', '').strip().lower() in ('1', 'true', 'yes', 'on')
     key = bool(os.getenv('OPENAI_API_KEY', '').strip())
-    model = bool(os.getenv('CENTRALSOC_AI_MODEL', '').strip())
+    model = bool(os.getenv('SOCSIGHT_AI_MODEL', '').strip())
     checks = [('AI enabled', enabled), ('API key configured', key), ('Model configured', model)]
     return {'ready': all(ok for _, ok in checks), 'checks': checks}
 
@@ -29,9 +29,9 @@ class AIProviderError(ValueError):
 
 HTTP_ERRORS = {
     400: 'AI request rejected (HTTP 400). Check that the configured model supports the Responses API and its request parameters.',
-    401: 'AI authentication failed (HTTP 401). Replace OPENAI_API_KEY in the server environment and restart CentralSOC.',
+    401: 'AI authentication failed (HTTP 401). Replace OPENAI_API_KEY in the server environment and restart SOCSight.',
     403: 'AI access denied (HTTP 403). Check API project permissions and access to the configured model.',
-    404: 'AI model or endpoint unavailable (HTTP 404). Check CENTRALSOC_AI_MODEL and API project model access.',
+    404: 'AI model or endpoint unavailable (HTTP 404). Check SOCSIGHT_AI_MODEL and API project model access.',
     429: 'AI request limited (HTTP 429). Check API quota/billing and rate limits, then retry later.',
 }
 
@@ -107,7 +107,7 @@ def investigate(db, alert, actor, mode):
     if mode == 'ai' and not ai_enabled():
         raise ValueError('AI is not configured')
     bundle = evidence_bundle(db, alert)
-    model = os.getenv('CENTRALSOC_AI_MODEL', '').strip()[:120] if mode == 'ai' else None
+    model = os.getenv('SOCSIGHT_AI_MODEL', '').strip()[:120] if mode == 'ai' else None
     state = 'COMPLETED'
     if mode == 'local':
         summary = (f"Evidence brief for alert:{alert.id}. Recorded risk: {alert.risk_score}/100; "

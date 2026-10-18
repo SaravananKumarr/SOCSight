@@ -1,4 +1,4 @@
-# CentralSOC v1.0 — Screen review fixes
+# SOCSight v1.0 — Screen review fixes
 
 This release-candidate increment addresses observed display bugs only.
 

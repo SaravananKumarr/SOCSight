@@ -1,4 +1,4 @@
-# CentralSOC Phase 2 — baseline database migrations
+# SOCSight Phase 2 — baseline database migrations
 
 ## What was implemented
 
@@ -19,7 +19,7 @@ In the project root, set `DATABASE_URL` to a new SQLite file or PostgreSQL datab
 
 ```powershell
 python -m pip install -r requirements.txt
-$env:DATABASE_URL = 'sqlite:///instance/centralsoc-new.db'
+$env:DATABASE_URL = 'sqlite:///instance/socsight-new.db'
 alembic upgrade head
 alembic current
 ```

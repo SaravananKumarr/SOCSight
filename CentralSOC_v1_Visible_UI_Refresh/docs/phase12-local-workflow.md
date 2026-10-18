@@ -1,12 +1,12 @@
 # Phase 12 — Safer local development workflow
 
-Do not extract each CentralSOC update into a new active project and expect the old
+Do not extract each SOCSight update into a new active project and expect the old
 `.env`, `instance/` database, user accounts, and uploaded files to follow. Those
 items are intentionally excluded from the release ZIP. Keep the working project
 folder, back up its database, and merge reviewed source changes into it. Never
 replace or delete `instance/` or `.env` when upgrading.
 
-On Windows, in the existing CentralSOC folder:
+On Windows, in the existing SOCSight folder:
 
 ```powershell
 .\.venv\Scripts\python.exe -m regexsoc.doctor

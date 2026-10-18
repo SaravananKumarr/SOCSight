@@ -1,4 +1,4 @@
-"""CentralSOC RBAC: exact, server-enforced permission sets.
+"""SOCSight RBAC: exact, server-enforced permission sets.
 
 Legacy ANALYST stays valid to preserve existing accounts.
 """

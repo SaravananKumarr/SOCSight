@@ -1,13 +1,13 @@
 > Historical UI release notes. For the current backend changes and migration instructions, see [operations-upgrade.md](operations-upgrade.md).
 
-# CentralSOC UI and Security Memory upgrade
+# SOCSight UI and Security Memory upgrade
 
 ## Verified changes
 - Navy/cyan shared interface aligned with the supplied triage reference.
 - Four triage counters computed across the entire filtered result set: New, Assigned to Me, risk >=80, and no analyst verdict.
 - Investigation action per row; existing filtering, export, roles and CSRF retained.
 - Security Memory at /security-memory searches stored analyst verdicts by detection, IP or username and links to the original evidence. It shows the latest verdict per alert, not a separate immutable knowledge store.
-- Remaining RegexSOC titles in web templates replaced with CentralSOC. Python package names, environment variables and database identifiers remain compatible.
+- Remaining RegexSOC titles in web templates replaced with SOCSight. Python package names, environment variables and database identifiers remain compatible.
 - Fixed a timezone-dependent test: compare naive UTC with naive UTC, with a bounded one-hour expectation.
 
 ## Validation

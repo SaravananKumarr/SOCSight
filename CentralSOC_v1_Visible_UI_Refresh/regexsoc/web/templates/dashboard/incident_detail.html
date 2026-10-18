@@ -1,5 +1,5 @@
 {% extends "app_base.html" %}
-{% block title %}Incident #{{ incident.id }} — CentralSOC{% endblock %}
+{% block title %}Incident #{{ incident.id }} — SOCSight{% endblock %}
 {% block content %}
 <a href="{{ url_for('incidents.list_incidents') }}">&larr; All incidents</a>
 <div class="workspace-heading"><div><h1>Incident #{{ incident.id }} — {{ incident.title }}</h1><p class="dim">Investigation, evidence, and analyst-controlled response</p></div><a class="btn" href="{{ url_for('incidents.list_incidents') }}">Incident queue</a></div>

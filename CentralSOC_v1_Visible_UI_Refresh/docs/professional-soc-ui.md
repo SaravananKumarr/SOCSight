@@ -1,4 +1,4 @@
-# CentralSOC v1 — Professional SOC UI refresh
+# SOCSight v1 — Professional SOC UI refresh
 
 A restrained visual design update based on the selected **Unified Command Center** concept.
 
@@ -10,7 +10,7 @@ A restrained visual design update based on the selected **Unified Command Center
 
 ## Updating
 
-Back up the running CentralSOC folder and SQLite database. Copy `regexsoc/web/static/css/app.css` from this release into the matching location in your working application. Restart Flask and hard refresh the browser (`Ctrl+Shift+R`). No migration required.
+Back up the running SOCSight folder and SQLite database. Copy `regexsoc/web/static/css/app.css` from this release into the matching location in your working application. Restart Flask and hard refresh the browser (`Ctrl+Shift+R`). No migration required.
 
 To test the full standalone archive, set up a virtual environment, install requirements, configure a **copy** of your existing database and secret key, then run tests. Do not overwrite `.env`, `instance`, SQLite databases or locally uploaded evidence.
 

@@ -1,7 +1,7 @@
 <div class="topbar">
   <button class="sidebar-toggle" data-sidebar-toggle aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
   <div class="header-titles">
-    <h1 class="header-title">{{ header_title or {'overview': 'Dashboard', 'alerts_list': 'Alert Triage', 'alert_detail': 'Alert Investigation', 'incidents_list': 'Incident Workspace', 'incident_detail': 'Incident Detail', 'events_list': 'Events', 'event_detail': 'Event Details', 'detections_list': 'Detections', 'iocs_list': 'Indicators of Compromise', 'log_analysis': 'Log Analysis', 'email_security': 'Email Security', 'reports': 'Reports', 'rules_list': 'Detection Rules', 'settings_page': 'Settings'}.get(request.endpoint.split('.')[-1] if request.endpoint else '', 'CentralSOC') }}</h1>
+    <h1 class="header-title">{{ header_title or {'overview': 'Dashboard', 'alerts_list': 'Alert Triage', 'alert_detail': 'Alert Investigation', 'incidents_list': 'Incident Workspace', 'incident_detail': 'Incident Detail', 'events_list': 'Events', 'event_detail': 'Event Details', 'detections_list': 'Detections', 'iocs_list': 'Indicators of Compromise', 'log_analysis': 'Log Analysis', 'email_security': 'Email Security', 'reports': 'Reports', 'rules_list': 'Detection Rules', 'settings_page': 'Settings'}.get(request.endpoint.split('.')[-1] if request.endpoint else '', 'SOCSight') }}</h1>
     <p class="header-sub">Security Operations Center</p>
   </div>
   <form class="search-form" method="get" action="{{ url_for('dashboard.search_results') }}" role="search">

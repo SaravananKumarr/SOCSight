@@ -5,7 +5,7 @@ All primary buttons now use the screenshot reference: background #174951, border
 The new buttons-create-incident-v4.css loads last and explicitly overrides prior primary-button color rules. No database migration or configuration change is required for this color fix. The previous AI/Memory fixes are included.
 
 ## Apply to the application you actually run
-1. Stop the running CentralSOC server (Ctrl+C in its terminal).
+1. Stop the running SOCSight server (Ctrl+C in its terminal).
 2. Extract this ZIP. Copy the contents of its CentralSOC_v1_Visible_UI_Refresh folder into the existing application folder containing the run.py you use. Replace application files, including regexsoc/web/templates/base.html and the entire regexsoc/web/static/css folder. Preserve .env, instance/, your database and uploads. Do not simply extract a second copy beside the application and start the original copy.
 3. From that updated application folder, run python run.py using your usual environment.
 4. Reload the browser (Ctrl+F5).

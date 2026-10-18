@@ -1,6 +1,6 @@
 {% extends "app_base.html" %}
 {% import "macros.html" as m %}
-{% block title %}Detections - CentralSOC{% endblock %}
+{% block title %}Detections - SOCSight{% endblock %}
 {% block content %}
 <h1>Detections</h1>
 <p class="page-sub">Every rule that has matched at least once, ranked by how often it fired. This counts every match, not just the ones that crossed the alert threshold &mdash; see <a href="{{ url_for('dashboard.alerts_list') }}">Alerts</a> for the triage queue.</p>

@@ -519,7 +519,7 @@ textarea.raw-email-input {
 .skip-link:focus, .skip-link:focus-visible { transform: translateY(0); }
 
 
-/* CentralSOC v1 professional SOC skin — restrained colors, evidence-first contrast.
+/* SOCSight v1 professional SOC skin — restrained colors, evidence-first contrast.
    Visual-only overrides: no business logic, permissions, or database changes. */
 :root {
   --bg:#080f18; --panel:#101a27; --panel-raised:#182638; --border:#28394d;

@@ -1,4 +1,4 @@
-# Run inside the existing CentralSOC project; never copies or recreates local data.
+# Run inside the existing SOCSight project; never copies or recreates local data.
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 Set-Location $ProjectRoot

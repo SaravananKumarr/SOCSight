@@ -1,4 +1,4 @@
-# CentralSOC v1.0 — Batch Log Upload
+# SOCSight v1.0 — Batch Log Upload
 
 The dashboard Log Analysis form accepts 1–8 files in one multipart POST. Supported file types are `.log`, `.txt`, `.csv`, `.json`, and `.jsonl`, subject to the existing validation and per-file size setting (`REGEXSOC_MAX_INPUT_BYTES`). A request-wide size limit is enforced by Flask and capped at approximately 100 MiB for default settings. This is not a queue/background worker; processing is synchronous.
 
@@ -17,4 +17,4 @@ Security: session authentication, `upload_logs` server-side permission, and CSRF
 
 ## Installation
 
-Back up the existing project, especially `.env`, `.venv`, `instance/`, uploaded evidence and SQLite data. Merge the changed `regexsoc/`, `tests/`, and `docs/` folders into your existing CentralSOC source. No database schema migration is necessary. Restart Flask and hard-refresh the browser. In **Log Analysis**, use the file chooser to select multiple files (Ctrl-click / Shift-click), then choose **Analyze selected files**.
+Back up the existing project, especially `.env`, `.venv`, `instance/`, uploaded evidence and SQLite data. Merge the changed `regexsoc/`, `tests/`, and `docs/` folders into your existing SOCSight source. No database schema migration is necessary. Restart Flask and hard-refresh the browser. In **Log Analysis**, use the file chooser to select multiple files (Ctrl-click / Shift-click), then choose **Analyze selected files**.

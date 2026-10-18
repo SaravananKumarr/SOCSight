@@ -1,4 +1,4 @@
-# CentralSOC v1 role model
+# SOCSight v1 role model
 
 Role identifiers: VIEWER, ANALYST (legacy), SOC_L1, SOC_L2, SOC_L3, SOC_MANAGER, ADMIN.
 

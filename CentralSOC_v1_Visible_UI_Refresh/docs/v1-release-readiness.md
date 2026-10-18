@@ -1,4 +1,4 @@
-# CentralSOC v1.0 — Release candidate gate (NOT production approval)
+# SOCSight v1.0 — Release candidate gate (NOT production approval)
 
 Scope is **frozen**: CSV/reporting, security review, end-to-end tests, deployment readiness. No new dashboards or detection features until these gates are closed.
 

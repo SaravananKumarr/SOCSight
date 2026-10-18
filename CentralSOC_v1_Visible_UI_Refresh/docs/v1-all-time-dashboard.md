@@ -1,4 +1,4 @@
-# CentralSOC v1.0 dashboard — All Time analytics
+# SOCSight v1.0 dashboard — All Time analytics
 
 The Security Telemetry header now provides **7 days**, **30 days**, and **All Time**. All Time uses persisted event and alert timestamps, including historical years. Unlike daily 7/30-day charts, the All Time event/alert timeline groups data by calendar month in UTC. Other charts aggregate all timestamped records, without rewriting old timestamps or inventing values.
 

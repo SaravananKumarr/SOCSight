@@ -63,9 +63,9 @@ def test_readonly_csrf_and_missing_resources(app):
 
 def test_ai_opt_in_and_failure_are_persisted_without_secrets(app, monkeypatch):
     c=app.test_client();login(c,'admin');aid=upload(c)['id']
-    monkeypatch.delenv('CENTRALSOC_AI_ENABLED',raising=False)
+    monkeypatch.delenv('SOCSIGHT_AI_ENABLED',raising=False)
     assert post(c,f'/alerts/{aid}/investigation',mode='ai',consent='yes').status_code==400
-    monkeypatch.setenv('CENTRALSOC_AI_ENABLED','1');monkeypatch.setenv('OPENAI_API_KEY','secret-key');monkeypatch.setenv('CENTRALSOC_AI_MODEL','test-model')
+    monkeypatch.setenv('SOCSIGHT_AI_ENABLED','1');monkeypatch.setenv('OPENAI_API_KEY','secret-key');monkeypatch.setenv('SOCSIGHT_AI_MODEL','test-model')
     assert post(c,f'/alerts/{aid}/investigation',mode='ai').status_code==400
     def fail(*args):raise TimeoutError('secret-key provider failure')
     monkeypatch.setattr(investigation,'ask_ai',fail)

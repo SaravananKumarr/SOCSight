@@ -57,7 +57,7 @@ def export_incidents():
             for item in items]
     response = Response(to_csv(rows, fields=["id", "title", "severity", "status", "owner",
                                              "created_at", "updated_at"]), mimetype="text/csv")
-    response.headers["Content-Disposition"] = 'attachment; filename="centralsoc-incidents.csv"'
+    response.headers["Content-Disposition"] = 'attachment; filename="socsight-incidents.csv"'
     response.headers["Cache-Control"] = "no-store"
     response.headers["X-Content-Type-Options"] = "nosniff"
     record_audit(g.db, AuditAction.INCIDENTS_EXPORTED, g.current_user.username, "SUCCESS",

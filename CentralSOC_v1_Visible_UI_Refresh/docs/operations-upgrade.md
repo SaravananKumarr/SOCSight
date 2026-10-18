@@ -1,4 +1,4 @@
-# CentralSOC response and investigation foundation
+# SOCSight response and investigation foundation
 
 ## Included
 - Persistent response runs: request, approve/reject, execute once. The supported action is a local snapshot of up to 100 linked alerts' metadata, captured at execution time. This is not a copy of raw evidence or a network containment connector.
@@ -26,7 +26,7 @@ Do not run migrations against the only copy of your production database. Rollbac
 ## Use it
 Open an alert → Investigation assistant → Build local evidence brief.
 Open an incident → Response orchestration → Request snapshot. Sign in as SOC_MANAGER/ADMIN to approve; then an incident-managing user can execute it.
-AI setup: set CENTRALSOC_AI_ENABLED=1, CENTRALSOC_AI_MODEL to a Responses-compatible model available to your API project, and OPENAI_API_KEY in the server environment. Restart the app. Review the per-request metadata disclosure before clicking Request AI investigation. Never commit credentials.
+AI setup: set SOCSIGHT_AI_ENABLED=1, SOCSIGHT_AI_MODEL to a Responses-compatible model available to your API project, and OPENAI_API_KEY in the server environment. Restart the app. Review the per-request metadata disclosure before clicking Request AI investigation. Never commit credentials.
 
 ## Optional real browser validation
 In an isolated development environment:

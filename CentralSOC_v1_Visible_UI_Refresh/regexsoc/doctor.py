@@ -1,4 +1,4 @@
-"""Read-only local setup checks for CentralSOC.
+"""Read-only local setup checks for SOCSight.
 
 Run ``python -m regexsoc.doctor`` from the project root. This module uses only
 Python's standard library and never creates a database or prints secret values.
@@ -70,7 +70,7 @@ def inspect_setup(root: Path, environ: dict[str, str] | None = None) -> list[tup
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     report = inspect_setup(root)
-    print('CentralSOC local setup check (read-only)')
+    print('SOCSight local setup check (read-only)')
     for level, message in report:
         print(f'[{level}] {message}')
     return 1 if any(level == 'WARN' for level, _ in report) else 0

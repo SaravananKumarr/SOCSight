@@ -14,10 +14,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 def main():
     from playwright.sync_api import sync_playwright, expect
     from werkzeug.serving import make_server
-    with tempfile.TemporaryDirectory(prefix='centralsoc-browser-') as tmp:
+    with tempfile.TemporaryDirectory(prefix='socsight-browser-') as tmp:
         os.environ.update(REGEXSOC_ENV='development', REGEXSOC_SECRET_KEY=secrets.token_hex(32),
                           REGEXSOC_UPLOAD_DIR=tmp+'/uploads', REGEXSOC_RULE_STATE=tmp+'/rules.json',
-                          CENTRALSOC_AI_ENABLED='0')
+                          SOCSIGHT_AI_ENABLED='0')
         from regexsoc.web import create_app
         from regexsoc.db.auth_service import create_user
         from regexsoc.db.session import session_scope

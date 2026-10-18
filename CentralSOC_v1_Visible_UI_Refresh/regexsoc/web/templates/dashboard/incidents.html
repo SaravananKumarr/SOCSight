@@ -1,5 +1,5 @@
 {% extends "app_base.html" %}
-{% block title %}Incidents — CentralSOC{% endblock %}
+{% block title %}Incidents — SOCSight{% endblock %}
 {% block content %}
 {% if can_view_incidents %}<p><a class="btn" href="{{ url_for('incidents.export_incidents') }}">Export up to 1,000 incidents (CSV)</a></p>{% endif %}
 <h1>Incident workspace</h1><p class="page-sub">Track investigations and response decisions.</p>

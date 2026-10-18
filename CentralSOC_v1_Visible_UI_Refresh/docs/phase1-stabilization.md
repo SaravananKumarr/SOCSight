@@ -1,4 +1,4 @@
-# CentralSOC / RegexSOC — Phase 1 stabilization record
+# SOCSight / RegexSOC — Phase 1 stabilization record
 
 ## Scope
 

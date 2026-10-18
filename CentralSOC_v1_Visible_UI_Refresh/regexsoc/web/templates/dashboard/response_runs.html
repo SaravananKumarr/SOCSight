@@ -1,5 +1,5 @@
 {% extends "app_base.html" %}
-{% block title %}Response Orchestration - CentralSOC{% endblock %}
+{% block title %}Response Orchestration - SOCSight{% endblock %}
 {% block content %}
 <a href="{{ url_for('incidents.detail', incident_id=incident.id) }}">← Incident #{{ incident.id }}</a><h1>Response orchestration</h1><p class="page-sub">{{ incident.title }} · Latest 50 runs</p>
 <section class="panel"><h2>Preserve an incident evidence snapshot</h2><p>Request → manager/admin approval → execute once. Saves metadata for up to 100 linked alerts in a durable run record. Raw log files remain in their existing storage. This does not isolate hosts, block IPs or disable accounts.</p>

@@ -1,6 +1,6 @@
 {% extends "app_base.html" %}
 {% import "macros.html" as m %}
-{% block title %}Overview - CentralSOC{% endblock %}
+{% block title %}Overview - SOCSight{% endblock %}
 {% block content %}
 <div class="soc-page-intro"><div><p class="soc-eyebrow">SECURITY OPERATIONS CENTER / COMMAND OVERVIEW</p><h1>Security Overview</h1><p class="soc-intro-caption">Threat visibility, investigation priorities, and security telemetry in one workspace.</p></div><a class="soc-overview-link" href="{{ url_for('dashboard.alerts_list') }}">Open alert queue →</a></div>
 <p class="page-sub">{{ stats.total_events }} events across {{ stats.total_log_files }} ingested log file{{ 's' if stats.total_log_files != 1 }}.</p>

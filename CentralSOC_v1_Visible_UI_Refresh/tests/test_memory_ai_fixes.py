@@ -33,9 +33,9 @@ def test_ip_history_includes_unreviewed_events_iocs_and_exact_match(app):
 
 
 def test_ai_configuration_checks_normalize_without_exposing_key(monkeypatch):
-    monkeypatch.setenv('CENTRALSOC_AI_ENABLED',' true ')
+    monkeypatch.setenv('SOCSIGHT_AI_ENABLED',' true ')
     monkeypatch.setenv('OPENAI_API_KEY',' hidden-secret ')
-    monkeypatch.setenv('CENTRALSOC_AI_MODEL',' test-model ')
+    monkeypatch.setenv('SOCSIGHT_AI_MODEL',' test-model ')
     assert investigation.ai_enabled()
     assert 'hidden-secret' not in str(investigation.ai_status())
     monkeypatch.setenv('OPENAI_API_KEY','   ')
